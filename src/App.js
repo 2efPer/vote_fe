@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import * as React from "react";
 import './App.css';
+import CliMode from './components/CliMode';
 
-function App() {
+
+
+const App =({contract, currentUser, nearConfig, wallet }) => {
+
+  console.log("contract : " + contract);
+  console.log("currentUser : " + currentUser);
+  console.log("nearConfig : " + nearConfig);
+  console.log("wallet : " + wallet);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome </h1>
+      <CliMode contract={contract} currentUser={currentUser} nearConfig={nearConfig} wallet={wallet} />
     </div>
   );
-}
-
+};
 export default App;
